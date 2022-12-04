@@ -1,26 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {LeaderBord, Title} from "./styles/appStyles";
+import title from "./icons/title.svg";
+import {LeadersTable} from "./components/LeadersTable/LeadersTable";
+import {HighestScorers} from "./components/HighestScorers/HighestScorers";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export const App: React.FC = () => {
+    return (
+        <LeaderBord>
+            <Title src={title} alt="title"/>
+            <HighestScorers/>
+            <LeadersTable/>
+        </LeaderBord>
+    );
 }
 
-export default App;
